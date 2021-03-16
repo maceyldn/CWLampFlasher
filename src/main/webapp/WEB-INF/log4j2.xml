@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+ 	<Appenders>
+		<File name="Logfile" fileName="/opt/cwlampflasher/log.log" immediateFlush="true" append="false">
+            <PatternLayout pattern="%d [%t] [%C{1}] %-5p: %m%n"/>
+        </File>
+		 <Servlet name="Servlet">
+            <PatternLayout pattern="%m%n%ex{none}"/>
+        </Servlet>
+ 	</Appenders>
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="Logfile"/>
+			<AppenderRef ref="Servlet"/>
+		</Root>
+	</Loggers>
+</Configuration>
